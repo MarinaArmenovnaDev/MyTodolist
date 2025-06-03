@@ -1,0 +1,58 @@
+.list {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 2px solid #6d31b1;
+}
+
+.taskContent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    color: inherit;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.checkboxWrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.checkboxWrapper:hover {
+    opacity: 0.7;
+}
+
+.taskTitleDone {
+    text-decoration: line-through;
+    opacity: 0.7;
+    color: #a3a3a3;
+}
+
+.noTasks {
+    color: #a3a3a3;
+    text-align: center;
+    padding: 16px 0;
+}

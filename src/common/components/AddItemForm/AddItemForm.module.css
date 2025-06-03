@@ -1,0 +1,33 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 320px;
+}
+
+.inputContainer {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline-color: black;
+}
+
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.longTitleMessage {
+    color: #fdfdfd;
+}
+
+.errorMessage {
+    color: #94efe7;
+}

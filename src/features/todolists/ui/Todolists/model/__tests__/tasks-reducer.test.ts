@@ -1,7 +1,7 @@
 import { beforeEach, expect, test } from 'vitest'
-import type {TasksStateType} from '../App'
-import {createTodolistTasksAC, deleteTaskAC, deleteTodolistTasksAC, tasksReducer} from "./tasks-reducer.ts";
-import {v1} from "uuid";
+import type {TasksStateType} from '../../../../../../app/App.tsx'
+import {createTodolistTasksAC, deleteTaskAC, deleteTodolistTasksAC, tasksReducer} from "../tasks-reducer.ts";
+import {nanoid} from "@reduxjs/toolkit";
 
 let startState: TasksStateType = {}
 
@@ -21,7 +21,7 @@ beforeEach(() => {
 })
 
 test('array should be created for new todolist', () => {
-    const todolistId = v1()
+    const todolistId = nanoid
     const endState = tasksReducer(startState, createTodolistTasksAC( todolistId))
 
     const keys = Object.keys(endState)

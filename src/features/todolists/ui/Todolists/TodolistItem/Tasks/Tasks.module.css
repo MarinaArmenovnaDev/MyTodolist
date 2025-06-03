@@ -1,0 +1,8 @@
+.todo{
+    background-color: rgba(250, 250, 250, 0.93);
+    padding: 15px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

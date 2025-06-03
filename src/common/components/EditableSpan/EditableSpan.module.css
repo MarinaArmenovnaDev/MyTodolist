@@ -1,0 +1,44 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.inputError {
+    border-color: #ff4d4f;
+}
+
+.charCounter {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    font-size: 10px;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.highlight {
+    color: #1890ff;
+}
+
+.errorMessage {
+    color: #610607;
+    font-size: 12px;
+}
+
+.taskTitleDone {
+    text-decoration: line-through;
+    color: #888;
+}

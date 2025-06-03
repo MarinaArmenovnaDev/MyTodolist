@@ -1,21 +1,21 @@
 import { beforeEach, expect, test } from 'vitest'
-import type {TodolistsPropsType} from "../App.tsx";
-import {v1} from "uuid";
+import type {TodolistsPropsType} from "../../../../../../app/App.tsx";
 import {
     changeTodolistFilterAC,
     changeTodolistTitleAC,
     createTodolistAC,
     deleteTodolistAC,
     todolistsReducer
-} from "./todolists-reducer.ts";
+} from "../todolists-reducer.ts";
+import {nanoid} from "@reduxjs/toolkit";
 
 let todolistId1: string
 let todolistId2: string
 let startState: TodolistsPropsType[] = []
 
 beforeEach(() => {
-    todolistId1 = v1()
-    todolistId2 = v1()
+    todolistId1 = nanoid()
+    todolistId2 = nanoid()
 
     startState = [
         { id: todolistId1, title: 'What to learn', filter: 'All' },
@@ -24,10 +24,12 @@ beforeEach(() => {
 })
 
 test('correct todolist should be deleted', () => {
-    const endState = todolistsReducer(startState, deleteTodolistAC(todolistId1))
+    test('correct todolist should be deleted', () => {
+        const endState = todolistsReducer(startState, deleteTodolistAC({todolistId: todolistId1}))
 
-    expect(endState.length).toBe(1)
-    expect(endState[0].id).toBe(todolistId2)
+        expect(endState.length).toBe(1)
+        expect(endState[0].id).toBe(todolistId2)
+    })
 })
 
 test('correct todolist should be created', () => {
